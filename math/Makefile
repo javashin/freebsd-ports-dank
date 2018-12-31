@@ -388,6 +388,7 @@
     SUBDIR += mumps4
     SUBDIR += muparser
     SUBDIR += nanoflann
+    SUBDIR += nasc
     SUBDIR += naturalmath
     SUBDIR += nauty
     SUBDIR += ndiff
