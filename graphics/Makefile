@@ -81,6 +81,7 @@
     SUBDIR += caffe
     SUBDIR += cairo
     SUBDIR += cairomm
+    SUBDIR += cairomm116
     SUBDIR += cal3d
     SUBDIR += camera
     SUBDIR += camerakit
