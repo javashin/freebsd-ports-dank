@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	libfido2
-PORTVERSION=	0.4.0
+DISTVERSION=	1.3.0-95
+DISTVERSIONSUFFIX=  -gd44dde3
 CATEGORIES=	security
-MASTER_SITES=	https://developers.yubico.com/libfido2/Releases/
+# MASTER_SITES=	https://developers.yubico.com/libfido2/Releases/
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Provides library functionality for FIDO 2.0
@@ -15,7 +16,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 LIB_DEPENDS=	libcbor.so:devel/libcbor \
 		libhidapi.so.0:comms/hidapi
 
+USE_GITHUB= yes
+GH_ACCOUNT= Yubico
+
 USES=		cmake compiler pkgconfig ssl
+
+CMAKE_ON= USE_HIDAPI
 
 CFLAGS+=	-D_WITH_GETLINE
 LDFLAGS+=	-lcrypto
